@@ -1,89 +1,104 @@
-body{ 
+body{
     background-color: #DEE9F7;
 }
 header{
-    background-color: #465B75;
-    max-width: 150rem; /* o usa 150rem si quieres en unidades relativas */
-    margin: 0 auto;
+    /*width: 150rem;*/
+    background-color:  #465B75;
+}
+.contenido-principal{
+    display: flex;
+    gap: 1rem;
     padding: 1rem;
 }
-.producto li{
-    list-style: none;
-    text-align: center;
+.contenido-principal .Notebooks{
+    display: block;
+    
 }
-.producto a{
-    color:  #ff6347;
-    text-align: start;
-    text-decoration: none;
-    font-weight:  bold;
-    font-size: 1.5rem;
-}
-
-
-.Menu ul {
-    list-style: none; /*le quita los puntos a las listas*/
-    color: white;
-    text-align: end; /*alinea la lista a la derecha*/
-    display: flex;
+.Menu ul{
     justify-content: flex-end;
-    padding: 0;
-    margin: 0 ;
-
+    display: flex;
 }
 .Menu li{
-    margin-left: 1rem;
+    list-style: none;
+    padding:      .5rem;
+    padding-top:   1rem;
     padding-right: 1rem;
+    
 }
 .Menu a{
     color: white;
     text-decoration: none;
-    font-weight: bolder;/* es una propiedad que controla el grosor del texto*/
 }
-.Contenido{
-    margin-left: 3rem;
+.Menu a:hover{
+    color: #808080;
 }
-.Contenido img{
-    width: 20rem; /* reducir la imagen*/
-    height: auto;
-}
-.Contenido p{
+.logo{
+    margin-left: 5rem;
     color: white;
     font-size: 2rem;
-    margin-bottom: auto;
+    
 }
-.productos{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin-top: 2rem;
+.logo p{
+    padding-left: 4rem;
+    padding-top: 5rem;
+    font-size: bolder;
 }
-.producto{
-    background-color: #ffffff;
-    padding: 1.5rem;
-    text-align: left;
-}
-.producto img{
-    width: 15rem;
-    height: auto;
+.filtros select{
+    display: flex;
+    margin: .5rem;
 }
 .filtros{
-    margin-bottom:auto;
-    background-color: #ffffff;
-    border: 1px solid #6A6F75;
-    padding: 1rem;
+    border: solid .1rem;
+    width: 15rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    background-color: #ffffff   ;
+    margin-bottom: auto;
 }
-.filtros h3 {
-    margin-top: 1rem;
-    color: #000000;
+.filtros input,
+.filtros select{
+    width: 13rem;
+    background-color: #6A6F75;
 }
+::placeholder{
+    color: white;  
+}
+.productos{
+    flex: 1;
+    display:block;
+    text-align: left;
+    background-color:  #ffffff;
+    border: solid .1rem black;
+    padding: .5rem;
 
-.filtros select,
-.filtros input {
-    width: 100%;
-    margin-bottom: .2rem;
 }
-.contenedor-principal {
+.grid-productos{
     display: grid;
-    grid-template-columns: 250px 1fr; /* 250px para filtros, el resto para productos */
+    grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    padding: 2rem;
+}
+.producto a{
+    text-decoration: none;
+    color: orange;
+    font-size: 3rem;
+    font-weight: bold;
+}
+footer{
+    background-color: #333333;
+    display: flex;
+    color: #ffffff;
+    padding-left: 3rem;
+    gap: 1rem;
+    
+}
+footer h2::after{
+    content: '';
+    display: block;
+    width: 33.3rem;
+    height: .2rem;
+    background-color: #ffffff;
+    
+}
+.bold{
+    font-weight: bold;
 }
